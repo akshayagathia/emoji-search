@@ -1,18 +1,3 @@
-Emoji Search
----
-
-Created with *create-react-app*. See the [full create-react-app guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-
-
-Install
----
-
-`npm install`
-
-
-
-Usage
----
-
-`npm start`
+Emoji Search using the docker
+1.This package is for the locally Isolated environment using docker so that changes can be tested before running through CI/CD pipeline.
+2.Using the docker compose file you can
