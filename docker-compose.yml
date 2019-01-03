@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  reactapp:
+    container_name: "reactapps"
+    build: .
+    environment:
+      env_file: .env
+      NODE_ENV: development
+    ports:
+      - '3000:3000'
