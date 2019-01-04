@@ -9,7 +9,7 @@ COPY package.json /src/app/
 #installing the dependencies
 RUN npm install
 
-#copying the code in the container
+#copying the code in the container in folder /src/app
 COPY . /src/app
 #starting the application
 EXPOSE 3000
