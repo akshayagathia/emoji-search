@@ -5,6 +5,7 @@ phases:
     commands:
       - ps aux | grep docker
       - docker version
+      - who
       - cat /etc/systemd/system/docker.service
       - systemctl start docker
   pre_build:
