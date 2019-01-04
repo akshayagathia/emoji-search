@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - docker images
+      - ps aux | grep docker
+      - docker version
       - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
   pre_build:
     commands:
