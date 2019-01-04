@@ -4,8 +4,7 @@ phases:
   install:
     commands:
       - ps aux | grep docker
-      - docker version
-      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+      - docker version      
   pre_build:
     commands:
       - docker build -t emoji-search .
