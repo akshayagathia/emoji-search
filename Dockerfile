@@ -1,5 +1,5 @@
 #Specify the docker base image
-From node:8.15.0
+From node:8.15.0 as builder
 
 #Selecting the working directory
 WORKDIR "/src/app"
@@ -13,4 +13,5 @@ RUN npm install
 COPY . /src/app
 #starting the application
 EXPOSE 3000
-CMD ["npm", "start"]
+RUN npm run build
+#CMD ["npm", "start"]
