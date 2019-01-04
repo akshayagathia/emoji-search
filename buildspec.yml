@@ -4,7 +4,9 @@ phases:
   install:
     commands:
       - ps aux | grep docker
-      - docker version      
+      - docker version
+      - who am i 
+      - systemctl start docker
   pre_build:
     commands:
       - docker build -t emoji-search .
