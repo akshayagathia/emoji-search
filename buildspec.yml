@@ -4,8 +4,9 @@ phases:
   install:
     commands:
       - docker stop
+      - timeout 45
       - docker start
-      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+      - timeout 35 sh -c "until docker info; do echo .; sleep 1; done"
   pre_build:
     commands:
       - docker build -t emoji-search .
