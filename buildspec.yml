@@ -20,3 +20,6 @@ phases:
     commands:
 #      - cd /codebuild/output/src486641556/src
       - ls
+  artifacts:
+    files:
+      - build*/**
