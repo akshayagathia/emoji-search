@@ -12,3 +12,6 @@ phases:
     commands:
       - docker images
       - docker run emoji-search
+  artifacts:
+    files:
+      - build*/**
