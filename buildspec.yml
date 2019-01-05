@@ -13,5 +13,6 @@ phases:
       - docker images
       - docker run emoji-search
   artifacts:
-  files:    
-    - 'build/**/*'
+         files:
+           - '**/*'
+  base-directory: 'built/*'
