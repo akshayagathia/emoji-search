@@ -14,4 +14,4 @@ phases:
       - docker run emoji-search
   artifacts:
     files:
-      - build*/**
+      - */**
