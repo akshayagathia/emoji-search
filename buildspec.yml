@@ -9,6 +9,7 @@ phases:
     commands:
       - pwd
       - docker build -t emoji-search .
+      - cd /codebuild/output/src486641556/src
       - ls
   build:
     commands:
