@@ -1,7 +1,7 @@
 #Specify the docker base image
 From node:8.15.0 as builder
 
-#Selecting the working directory
+#Selecting the working directorys
 WORKDIR "/src/app"
 COPY package.json /src/app/
 
