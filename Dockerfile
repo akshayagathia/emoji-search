@@ -1,8 +1,12 @@
-
-From node:8.15.0
+From node:8.15.0 as builder
 WORKDIR "/app"
 COPY package.json .
 RUN npm install
 COPY . .
+
+RUN npm run build
+
+
+FROM nginx
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+COPY --from=builder /app/built /usr/share/nginx/html
