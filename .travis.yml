@@ -6,4 +6,4 @@ before_install:
   - docker build -t akshayagathia/emoji-search -f Dockerfile.dev .
 
 script:
-  - docker run akshayagathia/emoji-search  npn run test -- --coverage
+  - docker run akshayagathia/emoji-search
