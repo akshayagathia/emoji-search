@@ -7,3 +7,13 @@ before_install:
 
 script:
   - docker run akshayagathia/emoji-search npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker-react-app"
+  env: "DockerReactApp-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-611793618815"
+  bucker_path: "docker-react-app"
+  on:
+    branch: master 
