@@ -1,18 +1,12 @@
-#Specify the docker base image
+
 From node:8.15.0 as builder
-
-#Selecting the working directoryss
-#WORKDIR "/src/app"
-WORKDIR "/"
-COPY package.json /
-
-
-#installing the dependencies
+WORKDIR "/app"
+COPY package.json .
 RUN npm install
-
-#copying the code in the container in folder /src/app
 COPY . .
-#starting the application
 EXPOSE 3000
 RUN npm run build
-#CMD ["npm", "start"]
+
+
+FROM nginx
+COPY --from=builder /app/built /usr/share/nginx/html
