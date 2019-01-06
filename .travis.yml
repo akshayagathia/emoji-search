@@ -11,10 +11,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
-  app: "docker-react-app"
-  env: "DockerReactApp-env"
+  app: "dockerapp"
+  env: "Dockerapp-env"
   bucket_name: "elasticbeanstalk-ap-south-1-611793618815"
-  zip_file: build
+  bucker_path: "reactapp"
+  skip_cleanup: true
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
